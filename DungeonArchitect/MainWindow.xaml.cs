@@ -9,7 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using static DungeonArchitect.DungeonLogic;
+
 
 
     
@@ -34,7 +34,7 @@ namespace DungeonArchitect
 
                 
                 var builder = new SimpleDungeonBuilder();
-                var director = new MapDirector(builder);
+                IDungeonDirector director = new MapDirector(builder);
 
                
                 director.Construct(size, size, complexity);
